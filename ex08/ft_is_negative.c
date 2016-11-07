@@ -6,9 +6,11 @@
 /*   By: abizeau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:49:18 by abizeau           #+#    #+#             */
-/*   Updated: 2016/11/07 13:49:19 by abizeau          ###   ########.fr       */
+/*   Updated: 2016/11/07 15:16:29 by abizeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_is_negative(int n)
 {

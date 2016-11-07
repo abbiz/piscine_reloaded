@@ -6,9 +6,11 @@
 /*   By: abizeau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:51:30 by abizeau           #+#    #+#             */
-/*   Updated: 2016/11/07 13:51:31 by abizeau          ###   ########.fr       */
+/*   Updated: 2016/11/07 15:16:48 by abizeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {

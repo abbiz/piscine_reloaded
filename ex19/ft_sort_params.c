@@ -6,9 +6,13 @@
 /*   By: abizeau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:53:39 by abizeau           #+#    #+#             */
-/*   Updated: 2016/11/07 13:53:42 by abizeau          ###   ########.fr       */
+/*   Updated: 2016/11/07 18:41:16 by abizeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <unistd.h>
+
+void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
@@ -36,39 +40,37 @@ int		ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void	ft_swap(int *a, int *b)
+void	ft_print_params(char **argv)
 {
-	int		tmp;
+	int	i;
 
-	tmp = *a;
-	*a = *b;
-	*b = tmp;
+	i = 1;
+	while (argv[i])
+	{
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
+		i++;
+	}
 }
 
 int		main(int argc, char **argv)
 {
-	int		find;
-	int		i;
+	int		j;
+	char	*temp;
 
-	find = 1;
-	while (find)
+	j = 1;
+	while (j + 1 <= argc - 1)
 	{
-		find = 0;
-		i = 0;
-		while (++i < argc - 1)
+		if (ft_strcmp(argv[j], argv[j + 1]) > 0)
 		{
-			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
-			{
-				ft_swap(argv[i], argv[i + 1]);
-				find = 1;
-			}
+			temp = argv[j + 1];
+			argv[j + 1] = argv[j];
+			argv[j] = temp;
+			j = 1;
 		}
+		else
+			j++;
 	}
-	i = 0;
-	while (++i < argc)
-	{
-		ft_putstr(argv[i]);
-		ft_putchar('\n');
-	}
+	ft_print_params(argv);
 	return (0);
 }

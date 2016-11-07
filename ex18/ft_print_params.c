@@ -6,9 +6,11 @@
 /*   By: abizeau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:51:54 by abizeau           #+#    #+#             */
-/*   Updated: 2016/11/07 13:53:30 by abizeau          ###   ########.fr       */
+/*   Updated: 2016/11/07 15:18:05 by abizeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 int		main(int argc, char **argv)
 {

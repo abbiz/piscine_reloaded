@@ -6,9 +6,11 @@
 /*   By: abizeau <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 13:49:04 by abizeau           #+#    #+#             */
-/*   Updated: 2016/11/07 13:49:05 by abizeau          ###   ########.fr       */
+/*   Updated: 2016/11/07 15:16:12 by abizeau          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+void	ft_putchar(char c);
 
 void	ft_print_numbers(void)
 {

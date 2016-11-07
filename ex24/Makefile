@@ -20,7 +20,11 @@ SRC=	srcs/ft_putchar.c \
 
 INC = ./includes
 
-OBJ = $(SRC:.c=.o)
+OBJ = ft_putchar.o \
+		ft_putstr.o \
+		ft_strcmp.o \
+		ft_strlen.o \
+		ft_swap.o
 
 all: $(NAME)
 

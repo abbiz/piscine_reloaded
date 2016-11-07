@@ -1,8 +1,18 @@
-void	ft_putchar(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: abizeau <marvin@42.fr>                     +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2016/11/07 13:53:39 by abizeau           #+#    #+#             */
+/*   Updated: 2016/11/07 13:53:42 by abizeau          ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 void	ft_putstr(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
@@ -14,26 +24,25 @@ void	ft_putstr(char *str)
 
 int		ft_strcmp(char *s1, char *s2)
 {
-	int i;
+	unsigned int	i;
 
 	i = 0;
-	while (s1[i] || s2[i])
+	while (s1[i] != '\0' || s2[i] != '\0')
 	{
 		if (s1[i] != s2[i])
-			return (s1[i] - s2[i]);
-		else
-			i++;
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
 	return (0);
 }
 
-void	ft_swap(char *s1, char *s2)
+void	ft_swap(int *a, int *b)
 {
-	char tmp;
+	int		tmp;
 
-	tmp = *s1;
-	*s1 = *s2;
-	*s2 = tmp;
+	tmp = *a;
+	*a = *b;
+	*b = tmp;
 }
 
 int		main(int argc, char **argv)
@@ -57,7 +66,9 @@ int		main(int argc, char **argv)
 	}
 	i = 0;
 	while (++i < argc)
-		ft_putstr(argv[i]), ft_putchar('\n');
+	{
+		ft_putstr(argv[i]);
+		ft_putchar('\n');
+	}
 	return (0);
 }
-
